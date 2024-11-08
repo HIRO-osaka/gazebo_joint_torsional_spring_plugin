@@ -69,7 +69,7 @@ namespace gazebo
 
 		protected: void OnUpdate()
 		{
-			double current_angle = this->joint->GetAngle(0).Radian();
+			double current_angle = this->joint->Position(0);
 			this->joint->SetForce(0, this->kx*(this->setPoint-current_angle));			
 		}
 		
